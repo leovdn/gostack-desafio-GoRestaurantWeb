@@ -25,9 +25,13 @@ const Dashboard: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
 
+  const foodItem = foods.find(food => food.id);
+
   useEffect(() => {
     async function loadFoods(): Promise<void> {
-      // TODO LOAD FOODS
+      const response = await api.get(`/foods/`);
+
+      setFoods(response.data);
     }
 
     loadFoods();
