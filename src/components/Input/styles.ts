@@ -14,9 +14,14 @@ export const Container = styled.div<IContainerProps>`
   padding: 18px 24px;
   width: 100%;
   font-size: 16px;
+  opacity: 0.8;
 
   & + div {
     margin-top: 24px;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 
   h1 {
@@ -43,7 +48,7 @@ export const Container = styled.div<IContainerProps>`
     flex: 1;
     background: transparent;
     border: 0;
-    color: #b7b7cc;
+    color: #3d3d4d;
 
     &::placeholder {
       color: #b7b7cc;
